@@ -19,24 +19,19 @@ export default {
 			modal: false,
 			categories: [
 				{
+					id: 2,
+					value: 'webclicks',
+					name: 'Web Clicks (development)',
+				},
+				{
 					id: 1,
-					value: 'web',
-					name: 'Web Application',
+					value: 'swan',
+					name: 'Swan Agency (advertisement)',
 				},
 				{
 					id: 2,
-					value: 'mobile',
-					name: 'Mobile Application',
-				},
-				{
-					id: 3,
-					value: 'ui-ux',
-					name: 'UI/UX Design',
-				},
-				{
-					id: 4,
-					value: 'branding',
-					name: 'Branding & Anim',
+					value: 'none',
+					name: 'None of The Above (new bussines proposal)',
 				},
 			],
 		};
@@ -146,7 +141,7 @@ export default {
 				<!-- Hire me button -->
 				<div class="hidden md:block">
 					<Button
-						title="Hire Me"
+						title="Lets talk"
 						class="text-md font-general-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-5 py-2.5 duration-300"
 						@click="showModal()"
 						aria-label="Hire Me Button"

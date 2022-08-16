@@ -44,7 +44,7 @@ export default {
 								<h5
 									class=" text-primary-dark dark:text-primary-light text-xl"
 								>
-									What project are you looking for?
+									Lets talk !
 								</h5>
 								<button
 									class="px-4 text-primary-dark dark:text-primary-light"
@@ -64,6 +64,17 @@ export default {
 											required=""
 											placeholder="Name"
 											aria-label="Name"
+										/>
+									</div>
+									<div class="mt-6">
+										<input
+											class="w-full px-5 py-2 border-1 border-gray-200 dark:border-secondary-dark rounded-md text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
+											id="company"
+											name="company"
+											type="text"
+											required=""
+											placeholder="Company Name"
+											aria-label="Company Name"
 										/>
 									</div>
 									<div class="mt-6">

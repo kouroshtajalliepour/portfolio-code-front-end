@@ -2,9 +2,9 @@
 export default {
 	data: () => {
 		return {
-			copyrightDate: new Date().getFullYear(),
-			projectName: 'Vue.js & Tailwind CSS Portfolio',
-			author: 'Stoman',
+			copyrightDate: 2022,
+			projectName: 'Personal Portfolio for Kourosh Tajalliepour',
+			author: 'Web Clicks IR',
 		};
 	},
 };
@@ -25,7 +25,7 @@ export default {
 			</a>
 			. Developed by
 			<a
-				href="https://stoman.me"
+				href="https://webclicks.ir"
 				target="__blank"
 				class="font-general-medium text-secondary-dark dark:text-secondary-light uppercase hover:underline hover:text-indigo-600 dark:hover:text-indigo-300 duration-500"
 				>{{ author }}</a

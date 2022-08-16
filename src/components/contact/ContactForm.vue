@@ -1,6 +1,27 @@
 <script>
 import Button from '../reusable/Button.vue';
-export default { components: { Button } };
+export default { 
+	components: { Button },
+	data(){
+		return{
+			contactData: {
+				fullName: "",
+				companyName: "",
+				email: "",
+				subject: "",
+				message: ""
+			}
+		}
+	},
+	methods: {
+		submit(){
+			console.log("osyafdks")
+			console.log(this.contactData);
+			// todo: API CALL
+		}
+	}
+	
+};
 </script>
 
 <template>
@@ -13,7 +34,7 @@ export default { components: { Button } };
 			>
 				Contact Form
 			</p>
-			<form action="#" class="font-general-regular space-y-7">
+			<form @submit.prevent="submit" class="font-general-regular space-y-7" >
 				<div>
 					<label
 						class="block text-lg text-primary-dark dark:text-primary-light mb-2"
@@ -21,6 +42,7 @@ export default { components: { Button } };
 						>Full Name</label
 					>
 					<input
+					v-model="contactData.fullName"
 						class="w-full px-5 py-2 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
 						id="name"
 						name="name"
@@ -33,15 +55,33 @@ export default { components: { Button } };
 				<div>
 					<label
 						class="block text-lg text-primary-dark dark:text-primary-light mb-2"
+						for="name"
+						>Organization Name</label
+					>
+					<input
+					v-model="contactData.companyName"
+						class="w-full px-5 py-2 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
+						id="name"
+						name="name"
+						type="text"
+						required=""
+						placeholder="Your Company Name"
+						aria-label="Name"
+					/>
+				</div>
+				<div>
+					<label
+						class="block text-lg text-primary-dark dark:text-primary-light mb-2"
 						for="email"
 						>Email</label
 					>
 					<input
+					v-model="contactData.email"
 						class="w-full px-5 py-2 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
 						id="email"
 						name="email"
 						type="text"
-						required=""
+						required="true"
 						placeholder="Your Email"
 						aria-label="Email"
 					/>
@@ -53,6 +93,7 @@ export default { components: { Button } };
 						>Subject</label
 					>
 					<input
+					v-model="contactData.subject"
 						class="w-full px-5 py-2 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
 						id="subject"
 						name="subject"
@@ -65,11 +106,13 @@ export default { components: { Button } };
 
 				<div>
 					<label
+					
 						class="block text-lg text-primary-dark dark:text-primary-light mb-2"
 						for="message"
 						>Message</label
 					>
 					<textarea
+					v-model="contactData.message"
 						class="w-full px-5 py-2 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
 						id="message"
 						name="message"
